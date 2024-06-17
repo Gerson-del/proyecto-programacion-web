@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <title> Mi musica favorita</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+
+    <body>
+        <h1 class = "titulo"> Musica que me gusta</h1>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href = "home.html">Home</a></li>
+                <li><a href = "about.html">About</a></li>
+                <li><a href = "artistas.html">artistas</a></li>
+                <li><a href = "contact.html">Contactame / añade una cancion</a></li>
+            </ul>
+        </nav>
+        
+        <div class="gallery">
+            <a target="_blank" href="https://www.youtube.com/watch?v=J---aiyznGQ">
+                <img src="/images/gatoPiano.jpg" alt="Gato tocando el piano" width="200" height="170">
+            </a>
+            <div class = "name">Gato tocando el piano</div>
+            <!-- esto es un audio con la cancion -->
+
+            <audio id="song1" src="/music/catSong.mp3" controls></audio>
+
+            <button></button>
+            <div class="content">
+                <a target="_blank" href="lyrics1.html">lyrics</a>
+                <a target="_blank" href="https://es.wikipedia.org/wiki/Keyboard_Cat">Wikipedia</a>
+            </div>
+        </div>
+
+        
+
+        <div class = "gallery">
+            <a  target = "_blank" href = "https://www.youtube.com/watch?v=pVInBRkoKgY&ab_channel=Tyler%2CTheCreator-Topic">
+                <img src = "/images/goneGone.jpg" alt="Imagen de la cancion Gone gone/Thank you" ;></a>
+            <div class = "name">Gone Gone</div>
+            <!-- esto es un audio con la cancion -->
+
+            <audio id="song2" src="/music/GONE, GONE  THANK YOU.mp3" controls></audio>
+
+            <button></button>
+            <div class="content">
+                <a target="_blank" href="lyrics2.html">lyrics</a>
+                <a target="_blank" href="https://en.wikipedia.org/wiki/Gone,_Gone_/_Thank_You#:~:text=%22Gone%2C%20Gone%20%2F%20Thank%20You,%22Fragile%22%20by%20Tatsuro%20Yamashita.">Wikipedia</a>
+            </div>
+        </div>
+
+
+        <div class = "gallery">
+            <a  target = "_blank" href = "https://www.youtube.com/watch?v=Yn5vQ66q7os&ab_channel=Enjambre-Topic">
+                <img src = "/images/ManiaCardiaca.jpg" alt="imagen del album mania cardica" ></a>
+            <div class = "name">Mania cardiaca</div>
+
+            <!-- esto es un audio con la cancion -->
+            <audio id="song3" src="/music/Manía Cardiaca.mp3" controls></audio>
+
+            <button></button>
+            <div class="content">
+                <a target="_blank" href="lyrics3.html">lyrics</a>
+                <a target="_blank" href="https://www.last.fm/es/music/Enjambre/_/Man%C3%ADa+Cardiaca">Wikipedia</a>
+            </div>
+        </div>
+
+
+        <div class = "gallery">
+            <a  target = "_blank" href = "https://www.youtube.com/watch?v=qooWnw5rEcI&ab_channel=MitskiVEVO">
+                <img src = "/images/nobody.jpg" alt="Imagen de la cancion nobody" ></a>
+            <div class = "name">nobody</div>
+
+            <!-- esto es un audio con la cancion -->
+            <audio id="song2" src="/music/Mitski - Nobody (Official Video).mp3" controls></audio>
+
+            <button></button>
+            <div class="content">
+                <a target="_blank" href="lyrics4.html">lyrics</a>
+                <a target="_blank" href="https://en.wikipedia.org/wiki/Nobody_(Mitski_song)">Wikipedia</a>
+            </div>
+
+        </div>
+
+
+    <!-- Usaremos algo de java Script para evitar que se reproduzcan las canciones al mismo tiempo -->
+
+    <script>
+        var currentAudio = null;
+    
+        //  Añadir event listeners a todos los audios
+        var audioElements = document.getElementsByTagName('audio');
+        for (var i = 0; i < audioElements.length; i++) {
+            audioElements[i].addEventListener('play', function(e) {
+                var clickedAudio = e.target;
+                // Pausar el audio actual si es diferente del que se acaba de dar click
+
+                if (currentAudio && currentAudio !== clickedAudio) {
+                    currentAudio.pause();
+                }
+                // actualizar audio actual al del que se dio click
+
+                currentAudio = clickedAudio;
+            });
+        }
+    </script>
+
+
+
+        
+                
+    </body>
+
+
+    
+
+</html>

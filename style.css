@@ -1,0 +1,323 @@
+/* Estilos para la galería de imágenes y la opción de ver la letra de la canción */
+.gallery {
+    display: inline-block;
+    border: 1px solid rgba(194, 172, 187, 0.445);
+    margin: 4px;
+    margin-top: 8px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.gallery:hover {
+    border: 1px solid rgba(241, 43, 179, 0.932);
+}
+
+.gallery img {
+    height: 170px;
+    width: 240px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.gallery button {
+    border: none;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.gallery a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.gallery .name {
+    padding: 10px 15px;
+    margin: 5px;
+    margin-top: 5px;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.gallery .content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px black;
+    z-index: 1;
+    padding: 10px;
+    top: 100%;
+    left: 0;
+}
+
+/* Mostrar .content solo cuando el cursor esté sobre el botón o sobre el contenido */
+.gallery button:hover + .content,
+.gallery .content:hover {
+    display: block;
+}
+
+.gallery a:hover {
+    background-color: rgb(248, 211, 242);
+}
+
+
+/* Ajusta el box-sizing para todos los elementos */
+* {
+    box-sizing: border-box;
+}
+
+/*------------------------------------------------------------------------------------------------------ */
+
+/* Estilos para el reproductor de música dentro de la galería */
+.gallery audio {
+    width: 100%;
+    margin-top: 10px;
+    outline: none;
+    background-color: rgba(247, 178, 232, 0.767);
+    padding: 6px;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(230, 5, 174, 0.5);
+}
+
+.gallery audio::-webkit-media-controls-panel {
+    background-color: #f058cf;
+}
+
+.gallery audio::-webkit-media-controls-current-time-display,
+.gallery audio::-webkit-media-controls-time-remaining-display {
+    color: #ffffff;
+}
+
+.gallery audio::-webkit-media-controls-volume-slider {
+    background-color: #f058cf;
+}
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------ */
+
+/* Estilos para los títulos principales de las páginas */
+.titulo {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
+    background: linear-gradient(45deg, #fc00bd, #8400ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.titulo:hover {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+}
+
+/*------------------------------------------------------------------------------------------------------ */
+
+/* Estilos para el margen del contenido principal */
+main {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/*------------------------------------------------------------------------------------------------------ */
+
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: rgb(255, 0, 212);
+    padding: 5px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.navbar li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navbar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    transition: background-color 0.3s;
+    border-radius: 15px;
+}
+
+.navbar a:hover {
+    background-color: #f9f9f9;
+    color: #da61c0;
+}
+
+/*------------------------------------------------------------------------------------------------------ */
+
+/* Estilos para la sección de "Artistas" */
+.artist {
+    margin-bottom: 2em;
+    background-color: white;
+    padding: 1em;
+    border-radius: 15px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.artist h2 {
+    color: #000000;
+}
+
+.artist-image {
+    width: 250px;
+    height: auto;
+    border-radius: 25px;
+    margin: 1em 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.artist-image:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+}
+
+/*------------------------------------------------------------------------------------------------------ */
+
+/* Estilos para las tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/*------------------------------------------------------------------------------------------------------ */
+
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+hr {
+    border: 1px solid #ccc;
+}
+
+pre {
+    white-space: pre-wrap;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    font-size: 16px;
+    color: #333;
+    overflow-x: auto;
+}
+
+p {
+    text-align: center;
+    color: #666;
+}
+
+/*------------------------------------------------------------------------------------------------------ */
+
+/* Estilos para la sección de Contacto / Añadir una Canción */
+.contact-section {
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+}
+
+.contact-section h2 {
+    text-align: center;
+    color: #333;
+}
+
+.contact-section hr {
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input[type="reset"],
+.form-group input[type="submit"] {
+    background-color: #eb22c0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.form-group input[type="reset"]:hover,
+.form-group input[type="submit"]:hover {
+    background-color: #f9f9f9;
+    color: #eb22c0;
+}
